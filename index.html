@@ -7,8 +7,9 @@
   </meta>
   <title>MIDI Player</title>
   <link rel="stylesheet" href="./style.css">
-  <script
-    src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.22.0/es6/core.js,npm/focus-visible@5"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.22.0/es6/core.js,npm/focus-visible@5">
+      </script> -->
+  <script src="./dependencies/combined.js"></script>
 </head>
 
 <body id="drop-zone">
@@ -29,7 +30,6 @@
         max-width: 1000px;
         margin: auto;
       ">
-
         <section id="main">
           <midi-visualizer id="visualizer0"></midi-visualizer>
           <div style="padding:5px;">
@@ -51,13 +51,13 @@
       <div id="curtain">
         Drop MIDI file here.
       </div>
-
     </div>
   </div>
 
-  <script
-    src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script>
-  <script type="text/javascript" src="./main.js" charset="utf-8">
+  <!-- <script
+    src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0"></script> -->
+  <script src="./dependencies/combined1.js"></script>
+  <script src="./main.js" type="text/javascript" charset="utf-8">
   </script>
   <script type="text/javascript" src="./dragdrop.js" charset="utf-8"></script>
 
