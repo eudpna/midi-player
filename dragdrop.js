@@ -2,19 +2,17 @@ var dropZone = document.getElementById('drop-zone');
 var fileInput = document.getElementById('midiFile');
 var curtain = document.getElementById('curtain');
 
-console.log('cur', curtain)
 
 dropZone.addEventListener('dragover', function (e) {
     e.stopPropagation();
     e.preventDefault();
-    console.log('cc', curtain, curtain.style)
     curtain.style.display = 'block';
 }, false);
 
-dropZone.addEventListener('dragleave', function (e) {
+curtain.addEventListener('dragleave', function (e) {
     e.stopPropagation();
     e.preventDefault();
-    curtain.stlye.display = 'none';
+    curtain.style.display = 'none';
 }, false);
 
 dropZone.addEventListener('drop', function (e) {
