@@ -2,6 +2,8 @@ var dropZone = document.getElementById('drop-zone');
 var fileInput = document.getElementById('midiFile');
 var curtain = document.getElementById('curtain');
 
+var dragdropMessage = document.getElementById('dragdrop-message')
+
 
 dropZone.addEventListener('dragover', function (e) {
     e.stopPropagation();
@@ -34,4 +36,5 @@ dropZone.addEventListener('drop', function (e) {
 
 fileInput.addEventListener('change', () => {
     curtain.style.display = 'none';
+    dragdropMessage.style.display = 'none'
 })
