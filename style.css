@@ -1,22 +1,22 @@
-a, .title {
+a, a:visited {
+    text-decoration: none;
+    color: rgb(26, 97, 251);
+}
+
+.title {
     text-decoration: none;
     color: black;
 }
 
 html, body {
     margin: 0;
-    /* padding: 0; */
+    padding: 0;
     overflow-x: hidden;
     height: 100%;
     /* background-color: 'white';
     color: black;
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; */
 }
-
-body {
-    padding: 5px;
-}
-
 
 
 /* Custom player style */
