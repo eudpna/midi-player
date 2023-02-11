@@ -103,6 +103,7 @@ label {
   color: #fff;
   display: inline-block;
   cursor: pointer;
+  border-radius: 0.25rem;
 }
 
 .fileclear {
