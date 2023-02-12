@@ -19,8 +19,8 @@ function widthSetter() {
         const els = Array.from(document.getElementsByTagName('svg'))
         if (!els.length) return
         const svg0 = els[0]
-        svg0.style.transformOrigin = 'left'        
-        const svgWidth = svg0.getBoundingClientRect().width
+        svg0.style.transformOrigin = 'left'
+        const svgWidth = svg0.getBBox().width
         const per = wrapper.offsetWidth / svgWidth
 
         if (svgWidth <= wrapper.offsetWidth) {
@@ -42,20 +42,22 @@ function widthSetter() {
 }
 
 window.addEventListener('mousemove', widthSetter)
-window.addEventListener('click', widthSetter)
-window.addEventListener('touchstart', widthSetter)
+window.addEventListener('click', setWidthForce)
+window.addEventListener('touchstart', setWidthForce)
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    widthSetter();
+    setWidthForce()  
+})
 
-    [300, 500, 1000, 1500, 2000, 2500, 3000].map((time) => {
+function setWidthForce() {
+    widthSetter();
+    [0, 50, 100, 200, 300, 500, 1000, 1500, 2000, 2500, 3000].map((time) => {
         window.setTimeout(() => {
             widthSetter()
         }, time);
     })
-})
-
+}
 
 widthSetter()
 
